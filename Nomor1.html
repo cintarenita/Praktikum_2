@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Pendaftaran Mahasiswa Baru</title>
+    <style>
+        .form-container {
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f2f2f2;
+        }
+
+        .form-label {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-radio {
+            margin-right: 10px;
+        }
+
+        .form-tambah {
+            background-color:blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-tambah:hover {
+            background-color: #45a049;
+        }
+
+        .sejajar{
+            display: flex;
+        }
+
+        .sejajar label {
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <center><h1> Pendaftaran Mahasiswa Baru </h1></center>
+    <form action="#" method="POST" class="form-container">
+        <label for="npm" class="form-label">NPM(Nomor Pokok Mahasiswa)</label>
+        <input type="text" id="npm" name="npm" placeholder="Nomor Pokok Mahasiswa" class="form-input">
+
+        <label for="nama" class="form-label">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" class="form-input">
+
+        <label for="alamat" class="form-label">Alamat</label>
+        <input type="text" id="alamat" name="alamat" placeholder="Alamat" class="form-input">
+
+        <label for="jk" class="form-label">Jenis Kelamin</label>
+        <div class="sejajar">
+            <input type="radio" id="laki" name="jk" value="Laki-laki" class="form-radio">
+            <label for="laki" class="form-label">Laki-laki</label>
+        </div>
+        <div  class="sejajar">
+            <input type="radio" id="perempuan" name="jk" value="Perempuan" class="form-radio">
+            <label for="perempuan" class="form-label">Perempuan</label>
+        </div>
+
+        <label for="prodi" class="form-label">Program Studi</label>
+        <select id="prodi" name="prodi" class="form-input">
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+        </select>
+
+        <input type="submit" value="Tambah" class="form-tambah">
+    </form>
+</body>
+
+</html>
